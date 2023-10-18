@@ -1,10 +1,7 @@
 FROM ubuntu/mysql:latest AS build
+RUN apt install wget -y
+RUN wget https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/8.2.4/xampp-linux-x64-8.2.4-0-installer.run
 
-RUN mysqld_safe
-
-RUN create database api_rest;
-
-RUN apt-get update
 
 RUN apt-get install openjdk-17-jdk -y
 RUN apt-get install maven -y
