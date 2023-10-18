@@ -6,6 +6,7 @@ RUN apt install gnupg1 -y
 RUN wget https://downloads.sourceforge.net/project/xampp/XAMPP%20Linux/8.0.28/xampp-linux-x64-8.0.28-0-installer.run
 RUN chmod +x xampp-linux-x64-8.0.28-0-installer.run
 RUN ./xampp-linux-x64-8.0.28-0-installer.run
+RUN y
 RUN /opt/lampp/xampp start mysql
 RUN mysql -h localhost -u root -p
 RUN CREATE DATABASE api_rest;
