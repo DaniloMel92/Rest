@@ -10,4 +10,22 @@ EXPOSE 8000
 
 COPY --from=build /target/rest-0.0.1-SNAPSHOT.jar app.jar
 
+RUN service mysql start
+
+RUN mysql_secure_installation
+
+RUN n
+
+RUN danilo
+
+RUN danilo
+
+RUN n
+
+RUN n
+
+RUN y
+
+RUN y
+
 ENTRYPOINT [  "java","-jar","app.jar"  ]
