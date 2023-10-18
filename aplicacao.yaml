@@ -6,7 +6,8 @@ services:
       - spring-boot-mysql-network
     restart: always
     environment:
-      - MYSQL_ROOT_PASSWORD=
+      - MYSQL_USER=root
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
       - MYSQL_DATABASE=api_rest
   web-service:
     build:
