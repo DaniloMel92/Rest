@@ -1,5 +1,6 @@
 FROM ubuntu/postgres:latest AS build
 RUN apt-get update
+RUN systemctl start postgresql
 RUN su postgres
 RUN psql
 RUN \password
