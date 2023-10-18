@@ -4,6 +4,7 @@ RUN apt install wget -y
 RUN apt install gnupg2 -y
 RUN apt install gnupg1 -y
 RUN wget https://downloads.sourceforge.net/project/xampp/XAMPP%20Linux/8.0.28/xampp-linux-x64-8.0.28-0-installer.run
+RUN chmod +x xampp-linux-x64-8.0.28-0-installer.run
 RUN ./xampp-linux-x64-8.0.28-0-installer.run
 RUN CREATE DATABASE api_rest;
 RUN apt-get install openjdk-17-jdk -y
