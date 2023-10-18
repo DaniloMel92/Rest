@@ -7,9 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
-
-import org.hibernate.annotations.GeneratorType;
-
 @Entity
 @SequenceGenerator(name = "Users",sequenceName = "Users",allocationSize = 1,initialValue = 1)
 public class Usuario implements Serializable{
