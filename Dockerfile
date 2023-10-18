@@ -1,7 +1,7 @@
 FROM ubuntu:18.04 AS build
 RUN apt-get update
-RUN apt install mysql-server
-RUN apt install sudo
+RUN apt install mysql-server -y
+RUN apt install sudo -y
 RUN sudo mysql -u root
 RUN ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';
 RUN FLUSH PRIVILEGES;
