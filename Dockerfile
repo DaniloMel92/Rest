@@ -1,15 +1,5 @@
 FROM ubuntu/mysql:latest AS build
 RUN apt-get update
-RUN apt install mysql-server -y
-RUN mysql_secure_installation
-RUN danilo
-RUN mysql
-RUN ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';
-RUN FLUSH PRIVILEGES;
-RUN \q
-RUN mysql -u root -p
-RUN CREATE DATABASE api_rest;
-RUN exit
 RUN apt-get install openjdk-17-jdk -y
 RUN apt-get install maven -y
 COPY . .
