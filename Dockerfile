@@ -1,4 +1,5 @@
 FROM ubuntu/mysql:latest AS build
+RUN mysqld_safe --skip-grant-tables &
 RUN mysql_secure_installation
 
 RUN n
