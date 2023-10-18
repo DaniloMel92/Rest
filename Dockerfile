@@ -1,4 +1,4 @@
-FROM ubuntu:lastest AS build
+FROM ubuntu:latest AS build
 RUN apt update
 RUN apt install openjdk-17-jdk -y
 RUN apt install maven -y
