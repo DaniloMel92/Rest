@@ -2,14 +2,6 @@ FROM ubuntu/postgres:latest AS build
 RUN apt-get update
 RUN apt-get install openjdk-17-jdk -y
 RUN apt-get install maven -y
-RUN apt-get install wget -y
-RUN su postgres 
-RUN psql 
-RUN ALTER USER postgres ENCRYPTED PASSWORD 'danilo';
-RUN create database api_rest;
-RUN \q
-RUN exit
-RUN systemctl restart postgresql
 
 COPY . .
 
