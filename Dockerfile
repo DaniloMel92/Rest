@@ -1,6 +1,8 @@
 FROM ubuntu:latest AS build
 RUN apt-get update
-RUN dpkg --add-architecture i386
+RUN apt install curl ca-certificates
+RUN curl -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc --fail https://www.postgresql.org/media/keys/ACCC4CF8.asc
+RUN install -d /usr/share/postgresql-common/pgdg
 RUN apt-get install openjdk-17-jdk -y
 RUN apt-get install maven -y
 RUN apt-get install wget -y
