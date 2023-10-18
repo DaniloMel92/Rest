@@ -1,6 +1,6 @@
 FROM ubuntu:latest AS build
 RUN apt-get update
-RUN apt install mysql-server
+RUN apt install mysql-server -y
 RUN mysql_secure_installation
 RUN danilo
 RUN danilo
