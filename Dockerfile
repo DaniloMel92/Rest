@@ -3,7 +3,7 @@ RUN apt update
 RUN apt install openjdk-17-jdk -y
 RUN apt install maven -y
 RUN apt install wget -y
-RUN sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+RUN sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 RUN apt update
 RUN apt install postgresql-12 -y
