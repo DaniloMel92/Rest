@@ -1,6 +1,6 @@
 FROM ubuntu/mysql:latest AS build
 
-RUN mysqld_safe --skip-grant-tables &
+RUN mysqld_safe
 
 RUN create database api_rest;
 
