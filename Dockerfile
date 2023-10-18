@@ -1,6 +1,6 @@
 FROM ubuntu/postgres:latest AS build
 RUN apt-get update
-RUN postgres -p 5432:5432 -e POSTGRES_PASSWORD=postgres -v pgdata:/var/lib/postgresql/data postgres
+RUN postgres -e POSTGRES_PASSWORD=postgres -v pgdata:/var/lib/postgresql/data postgres
 RUN psql -h localhost -p 5432 -U postgres
 RUN CREATE DATABASE api_rest;
 RUN apt-get install openjdk-17-jdk -y
