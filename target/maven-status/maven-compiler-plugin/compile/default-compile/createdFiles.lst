@@ -1,4 +1,4 @@
-curso/api/zero/rest/model/Usuario.class
-curso/api/zero/rest/controllers/GreetingsController.class
-curso/api/zero/rest/repository/UsuarioRepository.class
-curso/api/zero/rest/Application.class
+curso\api\zero\rest\Application.class
+curso\api\zero\rest\controllers\GreetingsController.class
+curso\api\zero\rest\model\Usuario.class
+curso\api\zero\rest\repository\UsuarioRepository.class
