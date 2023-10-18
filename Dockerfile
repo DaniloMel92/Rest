@@ -1,20 +1,8 @@
 FROM ubuntu/mysql:latest AS build
+
 RUN mysqld_safe --skip-grant-tables &
-RUN mysql_secure_installation
 
-RUN n
-
-RUN danilo
-
-RUN danilo
-
-RUN n
-
-RUN n
-
-RUN y
-
-RUN y
+RUN create database api_rest;
 
 RUN apt-get update
 
