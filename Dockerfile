@@ -3,7 +3,7 @@ RUN apt-get update
 RUN apt-get install openjdk-17-jdk -y
 RUN apt-get install maven -y
 RUN apt install docker -y
-RUN docker-compose up
+RUN docker-compose aplicacao.yaml up
 COPY . .
 
 FROM openjdk:17-jdk-slim
