@@ -1,4 +1,4 @@
-/home/danilo/rest/src/main/java/curso/api/zero/rest/repository/UsuarioRepository.java
-/home/danilo/rest/src/main/java/curso/api/zero/rest/Application.java
-/home/danilo/rest/src/main/java/curso/api/zero/rest/model/Usuario.java
-/home/danilo/rest/src/main/java/curso/api/zero/rest/controllers/GreetingsController.java
+/sdcard/Rest/src/main/java/curso/api/zero/rest/controllers/GreetingsController.java
+/sdcard/Rest/src/main/java/curso/api/zero/rest/model/Usuario.java
+/sdcard/Rest/src/main/java/curso/api/zero/rest/repository/UsuarioRepository.java
+/sdcard/Rest/src/main/java/curso/api/zero/rest/Application.java
