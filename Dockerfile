@@ -1,6 +1,13 @@
 FROM ubuntu/mysql:latest AS build
 RUN apt-get update
-RUN mysqld
+RUN mysql_secure_installation
+RUN y
+RUN 0
+RUN danilo
+RUN danilo
+RUN danilo
+RUN danilo
+RUN n
 RUN mysql
 RUN ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';
 RUN FLUSH PRIVILEGES;
