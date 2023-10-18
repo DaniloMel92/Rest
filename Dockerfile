@@ -1,4 +1,4 @@
-FROM ubuntu:ubuntu/nginx:1.18-21.04_beta AS build
+FROM ubuntu:1.18-21.04_beta AS build
 RUN apt-get update
 RUN apt-get install openjdk-17-jdk -y
 RUN apt-get install maven -y
