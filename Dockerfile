@@ -1,8 +1,8 @@
 FROM ubuntu/postgres:latest AS build
 RUN apt-get update
+RUN CREATE DATABASE api_rest
 RUN apt-get install openjdk-17-jdk -y
 RUN apt-get install maven -y
-
 COPY . .
 
 FROM openjdk:17-jdk-slim
