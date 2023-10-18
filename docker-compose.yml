@@ -1,0 +1,24 @@
+
+  services:
+    
+    mysql:
+        image: mysql:latest
+        command: --default-authentication-plugin=mysql_native_password
+        restart: always
+        ports:
+            - '3306:3306'
+        volumes:
+            - ./mysql-data:/var/lib/mysql
+        environment:
+             MYSQL_ROOT_PASSWORD: danilo
+             MYSQL_DATABASE: 'api_rest'
+      
+  java:
+      
+        build: .
+        image: openjdk:17-jdk-slim
+        restart: always
+        ports:
+            - '8000:8000'
+        links:
+            - mysql
