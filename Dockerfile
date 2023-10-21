@@ -27,10 +27,8 @@ RUN apt install wget -y
 RUN docker build -t rest_api-db .
 
 COPY . .
-
-FROM openjdk:17-jdk-slim
 FROM mysql:5.7
-EXPOSE 8000
+EXPOSE 3306
 
 COPY --from=build /target/rest-0.0.1-SNAPSHOT.jar app.jar
 
