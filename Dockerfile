@@ -1,8 +1,7 @@
-
 FROM ubuntu:latest AS build
 RUN apt update
 RUN apt install docker.io -y
-docker ps -q
+docker ps
 COPY . .
 
 FROM openjdk:17-jdk-slim
