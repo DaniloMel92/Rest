@@ -1,5 +1,6 @@
 FROM ubuntu:latest AS build
 RUN apt update
+RUN -it build
 RUN apt install mysql-server -y
 COPY . .
 
