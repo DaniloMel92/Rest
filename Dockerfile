@@ -11,5 +11,5 @@ COPY --from=build /target/rest-0.0.1-SNAPSHOT.jar app.jar
 
 
 
-ENTRYPOINT [  "su","mysql"]
+ENTRYPOINT [  "mysqld_safe --skip-grant-tables","mysql","-uroot"]
 
