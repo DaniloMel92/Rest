@@ -1,6 +1,6 @@
 FROM ubuntu:latest AS build
 RUN apt update
-RUN apt install openjdk-jdk-17 -y
+RUN apt install openjdk-17-jdk -y
 RUN apt install mysql-server -y
 COPY . .
 
