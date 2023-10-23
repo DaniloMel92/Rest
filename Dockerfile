@@ -1,7 +1,6 @@
 FROM ubuntu:latest AS build
 RUN apt update
 RUN apt install mysql-server -y
-RUN service mysql stop
 COPY . .
 
 FROM openjdk:17-jdk-slim
