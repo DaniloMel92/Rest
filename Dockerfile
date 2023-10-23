@@ -3,6 +3,7 @@ RUN apt update
 
 COPY . .
 
+FROM ubuntu:latest
 
 EXPOSE 22
 
