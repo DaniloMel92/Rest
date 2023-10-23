@@ -3,7 +3,6 @@ RUN apt update
 
 COPY . .
 
-FROM openjdk:17-jdk-slim
 
 EXPOSE 22
 
