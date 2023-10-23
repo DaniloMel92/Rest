@@ -12,5 +12,5 @@ COPY --from=build /target/rest-0.0.1-SNAPSHOT.jar app.jar
 
 
 
-ENTRYPOINT [  "mysqld_safe","----skip-grant-tables &","  ]
+ENTRYPOINT [  "mysqld_safe","--skip-grant-tables &"]
 CMD ["bash"]
