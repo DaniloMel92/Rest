@@ -1,13 +1,12 @@
 FROM ubuntu:latest
 RUN apt update
-RUN apt-get install  curl apt-transport-https ca-certificates software-properties-common -y
-RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
-RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-RUN apt update
-RUN apt install docker-ce -y
+RUN apt-get wget -y
+RUN wget https://downloads.sourceforge.net/project/xampp/XAMPP%20Linux/8.0.28/xampp-linux-x64-8.0.28-0-installer.run
+RUN chmod +x xampp-linux-x64-8.0.28-0-installer.run
+RUN ./xampp-linux-x64-8.0.28-0-installer.run
 COPY . .
 
-EXPOSE 22
-CMD ["docker","ps"]
+EXPOSE 3306
+CMD ["mysql","-u","root"]
 
 
