@@ -7,6 +7,9 @@ RUN ./xampp-linux-x64-8.0.28-0-installer.run
 COPY . .
 
 EXPOSE 3306
-CMD ["mysql","-u","root"]
+ENTRYPOINT ["/opt/lampp/xampp/","start"]
+
+
+CMD ["mysql","-u","root","-p"]
 
 
